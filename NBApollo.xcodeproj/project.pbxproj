@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AA6F5CCA2C46E0668353284 /* Pods_NBApollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D004F6225C2E4BE85DF70EFD /* Pods_NBApollo.framework */; };
 		9CD3112F243332BB003C071C /* NBApollo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD3112D243332BB003C071C /* NBApollo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CD31136243332CB003C071C /* ApiRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD31135243332CB003C071C /* ApiRest.swift */; };
+		9CD31139243343EE003C071C /* ApiRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD31138243343EE003C071C /* ApiRestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +18,10 @@
 		9CD3112D243332BB003C071C /* NBApollo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBApollo.h; sourceTree = "<group>"; };
 		9CD3112E243332BB003C071C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CD31135243332CB003C071C /* ApiRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRest.swift; sourceTree = "<group>"; };
+		9CD31138243343EE003C071C /* ApiRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRestClient.swift; sourceTree = "<group>"; };
+		D004F6225C2E4BE85DF70EFD /* Pods_NBApollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBApollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEFB8B310741721EA7A5F8E0 /* Pods-NBApollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBApollo.debug.xcconfig"; path = "Target Support Files/Pods-NBApollo/Pods-NBApollo.debug.xcconfig"; sourceTree = "<group>"; };
+		F80F3C9646688009F774C61A /* Pods-NBApollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBApollo.release.xcconfig"; path = "Target Support Files/Pods-NBApollo/Pods-NBApollo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,17 +29,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA6F5CCA2C46E0668353284 /* Pods_NBApollo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B2397D560F4998BC3A57D6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D004F6225C2E4BE85DF70EFD /* Pods_NBApollo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9CD31120243332BB003C071C = {
 			isa = PBXGroup;
 			children = (
 				9CD3112C243332BB003C071C /* NBApollo */,
 				9CD3112B243332BB003C071C /* Products */,
+				C16FE9A9BCCA20F6B6879926 /* Pods */,
+				2B2397D560F4998BC3A57D6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +68,18 @@
 				9CD3112D243332BB003C071C /* NBApollo.h */,
 				9CD3112E243332BB003C071C /* Info.plist */,
 				9CD31135243332CB003C071C /* ApiRest.swift */,
+				9CD31138243343EE003C071C /* ApiRestClient.swift */,
 			);
 			path = NBApollo;
+			sourceTree = "<group>";
+		};
+		C16FE9A9BCCA20F6B6879926 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEFB8B310741721EA7A5F8E0 /* Pods-NBApollo.debug.xcconfig */,
+				F80F3C9646688009F774C61A /* Pods-NBApollo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,6 +100,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CD31132243332BB003C071C /* Build configuration list for PBXNativeTarget "NBApollo" */;
 			buildPhases = (
+				5F534F612770F23FD97FFFAD /* [CP] Check Pods Manifest.lock */,
 				9CD31125243332BB003C071C /* Headers */,
 				9CD31126243332BB003C071C /* Sources */,
 				9CD31127243332BB003C071C /* Frameworks */,
@@ -130,12 +158,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F534F612770F23FD97FFFAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NBApollo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CD31126243332BB003C071C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9CD31136243332CB003C071C /* ApiRest.swift in Sources */,
+				9CD31139243343EE003C071C /* ApiRestClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +318,7 @@
 		};
 		9CD31133243332BB003C071C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEFB8B310741721EA7A5F8E0 /* Pods-NBApollo.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +345,7 @@
 		};
 		9CD31134243332BB003C071C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F80F3C9646688009F774C61A /* Pods-NBApollo.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

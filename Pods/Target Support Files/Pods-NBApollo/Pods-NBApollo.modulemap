@@ -1,0 +1,6 @@
+framework module Pods_NBApollo {
+  umbrella header "Pods-NBApollo-umbrella.h"
+
+  export *
+  module * { export * }
+}
