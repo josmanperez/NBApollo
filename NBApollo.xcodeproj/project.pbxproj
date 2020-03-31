@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9CD3112F243332BB003C071C /* NBApollo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD3112D243332BB003C071C /* NBApollo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CD31136243332CB003C071C /* ApiRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD31135243332CB003C071C /* ApiRest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9CD3112A243332BB003C071C /* NBApollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NBApollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD3112D243332BB003C071C /* NBApollo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBApollo.h; sourceTree = "<group>"; };
 		9CD3112E243332BB003C071C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD31135243332CB003C071C /* ApiRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				9CD3112D243332BB003C071C /* NBApollo.h */,
 				9CD3112E243332BB003C071C /* Info.plist */,
+				9CD31135243332CB003C071C /* ApiRest.swift */,
 			);
 			path = NBApollo;
 			sourceTree = "<group>";
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					9CD31129243332BB003C071C = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -131,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD31136243332CB003C071C /* ApiRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +265,7 @@
 		9CD31133243332BB003C071C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YH9NMWWMRD;
@@ -276,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.neboeiro.NBApollo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +291,7 @@
 		9CD31134243332BB003C071C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YH9NMWWMRD;
