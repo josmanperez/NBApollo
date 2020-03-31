@@ -17,17 +17,18 @@ Pod::Spec.new do |spec|
 
   spec.name         = "NBApollo"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of NBApollo."
+  spec.summary      = "HTTP Request made simple"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
+  spec.description  = <<-DESC 
+  Librería para gestionar las llamadas al API. Devuelve un objeto que conforme con el protocolo codeable
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/NBApollo"
+  spec.homepage     = "https://github.com/josmanperez/NBApollo"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -81,7 +82,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/josmanperez/NBApollo.git", :tag => "#{spec.version}" }
 
-
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
@@ -133,5 +133,5 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-
+  spec.swift_versions = "4.2"
 end
