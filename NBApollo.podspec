@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Josman Pérez Expósito" => "josman.perez@udc.es" }
+  spec.author             = { "Josman Pérez Expósito" => "jppe86@gmail.com" }
   # Or just: spec.author    = "Josman Pérez Expósito"
   # spec.authors            = { "Josman Pérez Expósito" => "josman.perez@udc.es" }
   # spec.social_media_url   = "https://twitter.com/Josman Pérez Expósito"
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "12.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/NBApollo.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/josmanperez/NBApollo.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "NBApollo", "NBApollo/**/*.{h,m}"
+  spec.exclude_files = "NBApollo/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
