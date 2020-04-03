@@ -44,12 +44,9 @@ If you API returns a object, something like this:
 
 ```json
 {
-	"datos":
-    {
-    	"id":"1234",
-        "valid": true
-    }
- }
+	"id":"1234",
+    "valid": true
+}
  ```
 
 Then you need to create a ```Codable``` object like this:
