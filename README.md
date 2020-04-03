@@ -96,4 +96,4 @@ self.nodoRequest.request(with: headers, method: .get, parameters: nil) {
 
 ## License
 
-Alamofire is released under the MIT license. [See LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
+NBApollo is released under the MIT license. [See LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
