@@ -44,8 +44,8 @@ If you API returns a object, something like this:
 
 ```json
 {
-	"id":"1234",
-    "valid": true
+ "id":"1234",
+ "valid": true
 }
  ```
 
