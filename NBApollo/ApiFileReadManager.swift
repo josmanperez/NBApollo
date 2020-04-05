@@ -9,7 +9,6 @@ extension String: ApiRawValueProtocol {
     public var apiConfiguration: String {
         return "apiConfiguration"
     }
-    
     public var plist: String {
         return "plist"
     }
@@ -34,22 +33,22 @@ struct FileReadManagerError: Error {
 /// For retrieving Api Keys
 public class FileReadManager {
     
-    public static var shared: FileReadManager? {
-        if let initializedShared = _shared {
-            return initializedShared
-        } else {
-            return nil
-        }
-    }
+//    public static var shared: FileReadManager? {
+//        if let initializedShared = _shared {
+//            return initializedShared
+//        } else {
+//            return nil
+//        }
+//    }
     
-    private static var _shared: FileReadManager?
+//    private static var _shared: FileReadManager?
     private var config: ApiRawValueProtocol
     
-    public class func setup(withConfig config: ApiRawValueProtocol) {
-        FileReadManager._shared = FileReadManager(withConfig: config)
-    }
+//    public class func setup(withConfig config: ApiRawValueProtocol) {
+//        FileReadManager._shared = FileReadManager(withConfig: config)
+//    }
     
-    private init(withConfig config: ApiRawValueProtocol) {
+    public init(withConfig config: ApiRawValueProtocol) {
         self.config = config
     }
     /// Function to retrieve api keys to used them in the rest api requests
