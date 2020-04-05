@@ -19,6 +19,7 @@ extension String: ApiRawValueProtocol {
 struct FileReadManagerError: Error {
     
     enum ErrorKind: Error {
+        case configurationNotInitialized
         case pathNotFound
         case infoPlistMalformed
         case keyNotFound
@@ -33,19 +34,18 @@ struct FileReadManagerError: Error {
 /// For retrieving Api Keys
 public class FileReadManager {
     
-    public static var shared: FileReadManager {
+    public static var shared: FileReadManager? {
         if let initializedShared = _shared {
             return initializedShared
         } else {
-            print("Singleton not yet initialized. Run setup(withConfig:) first")
-            return FileReadManager(withConfig: ApiRawValueProtocol.self as! ApiRawValueProtocol)
+            return nil
         }
     }
     
     private static var _shared: FileReadManager?
     private var config: ApiRawValueProtocol
     
-    public func setup(withConfig config: ApiRawValueProtocol) {
+    public class func setup(withConfig config: ApiRawValueProtocol) {
         FileReadManager._shared = FileReadManager(withConfig: config)
     }
     
