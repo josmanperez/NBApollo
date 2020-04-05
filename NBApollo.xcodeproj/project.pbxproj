@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5AA6F5CCA2C46E0668353284 /* Pods_NBApollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D004F6225C2E4BE85DF70EFD /* Pods_NBApollo.framework */; };
+		9C246405243A245600E1A2A9 /* ApiFileReadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C246404243A245600E1A2A9 /* ApiFileReadManager.swift */; };
 		9CD3112F243332BB003C071C /* NBApollo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CD3112D243332BB003C071C /* NBApollo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CD31136243332CB003C071C /* ApiRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD31135243332CB003C071C /* ApiRest.swift */; };
 		9CD31139243343EE003C071C /* ApiRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD31138243343EE003C071C /* ApiRestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C246404243A245600E1A2A9 /* ApiFileReadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFileReadManager.swift; sourceTree = "<group>"; };
 		9CD3112A243332BB003C071C /* NBApollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NBApollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD3112D243332BB003C071C /* NBApollo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NBApollo.h; sourceTree = "<group>"; };
 		9CD3112E243332BB003C071C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				9CD3112E243332BB003C071C /* Info.plist */,
 				9CD31135243332CB003C071C /* ApiRest.swift */,
 				9CD31138243343EE003C071C /* ApiRestClient.swift */,
+				9C246404243A245600E1A2A9 /* ApiFileReadManager.swift */,
 			);
 			path = NBApollo;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD31136243332CB003C071C /* ApiRest.swift in Sources */,
+				9C246405243A245600E1A2A9 /* ApiFileReadManager.swift in Sources */,
 				9CD31139243343EE003C071C /* ApiRestClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
