@@ -77,16 +77,13 @@ When you need to call this method:
 
 ```swift
 self.nodoRequest.request(with: headers, method: .get, parameters: nil) { 
-	(success, datos) in 
+	result in 
 
-    if success {
-        guard let _data = datos else {
-            return
-        }
-        print(_data)
-    } else {
-        
-    }
+    case .failure(let error):
+        ...
+
+    case .success(let response):
+        print(response)
 }
 
 ```
