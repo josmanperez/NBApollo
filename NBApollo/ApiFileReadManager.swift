@@ -33,20 +33,7 @@ struct FileReadManagerError: Error {
 /// For retrieving Api Keys
 public class FileReadManager {
     
-//    public static var shared: FileReadManager? {
-//        if let initializedShared = _shared {
-//            return initializedShared
-//        } else {
-//            return nil
-//        }
-//    }
-    
-//    private static var _shared: FileReadManager?
     private var config: ApiRawValueProtocol
-    
-//    public class func setup(withConfig config: ApiRawValueProtocol) {
-//        FileReadManager._shared = FileReadManager(withConfig: config)
-//    }
     
     public init(withConfig config: ApiRawValueProtocol) {
         self.config = config

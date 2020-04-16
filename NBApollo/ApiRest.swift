@@ -12,6 +12,6 @@ import Alamofire
 protocol ApiRest {
     associatedtype T
     var urlServer: String { get }
-    func request(method: HTTPMethod, parameters: [String:String]?, completionHandler: @escaping ((Bool, T?) -> Void))
-    func request(with headers: HTTPHeaders, method: HTTPMethod, parameters: [String:String]?, completionHandler: @escaping ((Bool, T?) -> Void))
+    func request(method: HTTPMethod, parameters: [String:String]?, completionHandler: @escaping (Result<T,DataResponseError>) -> Void)
+    func request(with headers: HTTPHeaders, method: HTTPMethod, parameters: [String:String]?, completionHandler: @escaping (Result<T,DataResponseError>) -> Void)
 }
