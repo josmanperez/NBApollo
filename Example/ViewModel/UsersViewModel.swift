@@ -10,21 +10,21 @@ import Foundation
 import NBApollo
 
 
-protocol EmployeeViewModelDelegate: class {
+protocol UsersViewModelDelegate: class {
     func onFetchCompleted()
     func onFetchFailed(with reason: String)
 }
 
-class EmployeeViewModel {
+class UsersViewModel {
     
-    let client = EmployeeClient()
+    let client = UserClient()
     
-    private weak var delegate: EmployeeViewModelDelegate?
+    private weak var delegate: UsersViewModelDelegate?
     
     private var total: Int = 0
-    private var employees:[Employee] = []
+    private var users:[User] = []
     
-    init(delegate: EmployeeViewModelDelegate) {
+    init(delegate: UsersViewModelDelegate) {
         self.delegate = delegate
     }
     
@@ -32,17 +32,17 @@ class EmployeeViewModel {
         return total
     }
     
-    func employee(at index: Int) -> Employee {
-        return employees[index]
+    func user(at index: Int) -> User {
+        return users[index]
     }
     
     func fetchEmployees() {
         
         client.fetchEmployees { (result) in
             switch result {
-                case .success(let employees):
-                    self.employees = employees
-                    self.total = employees.count
+                case .success(let users):
+                    self.users = users
+                    self.total = users.count
                     self.delegate?.onFetchCompleted()
                 
                 case .failure(let error):

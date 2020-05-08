@@ -8,9 +8,9 @@
 
 import UIKit
 
-class EmployeeViewController: UIViewController, EmployeeViewModelDelegate {
+class EmployeeViewController: UIViewController, UsersViewModelDelegate {
     
-    private var viewModel: EmployeeViewModel!
+    private var viewModel: UsersViewModel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,7 +18,7 @@ class EmployeeViewController: UIViewController, EmployeeViewModelDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        viewModel = EmployeeViewModel(delegate: self)
+        viewModel = UsersViewModel(delegate: self)
         
         viewModel.fetchEmployees()
     }
@@ -40,7 +40,7 @@ extension EmployeeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeCell.reuseIdentifier, for: indexPath) as? EmployeeCell {
-            let employee = viewModel.employee(at: indexPath.row)
+            let employee = viewModel.user(at: indexPath.row)
             cell.configureCell(e: employee)
             return cell
         } else {

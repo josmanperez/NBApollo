@@ -15,7 +15,7 @@ class EmployeeCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     
     /// Configure the Cell with the object Employee
-    func configureCell(e: Employee) {
+    func configureCell(e: User) {
         name.text = e.name
     }
 

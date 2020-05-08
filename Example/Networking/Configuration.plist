@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>endpoint</key>
-	<string>http://dummy.restapiexample.com/api/v1/employees</string>
+	<string>https://jsonplaceholder.typicode.com/users</string>
 </dict>
 </plist>

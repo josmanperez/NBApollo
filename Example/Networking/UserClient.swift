@@ -9,7 +9,7 @@
 import NBApollo
 
 /// Class for handle the Configuration.plist where all the endpoints are placed
-class EmployeeConfiguration: ApiRawValueProtocol {
+class UsersConfiguration: ApiRawValueProtocol {
 
     /// The name of the plist file where the endpoints are
     var apiConfiguration: String = "Configuration"
@@ -20,14 +20,14 @@ class EmployeeConfiguration: ApiRawValueProtocol {
     var endpoint = "endpoint"
 }
 
-class EmployeeClient {
+class UserClient {
 
     /// Variable to return the base URL.
     /// It reads from a Configuration file the strings of the base url
     /// and returns it.
     /// If there is an error reading the configuration file it returns an empty String
     private lazy var baseURL: String = {
-        let configuration = EmployeeConfiguration()
+        let configuration = UsersConfiguration()
         let frm = FileReadManager(withConfig: configuration)
         do {
             let url = try frm.getApiValue(with: configuration.endpoint)
@@ -39,20 +39,10 @@ class EmployeeClient {
 
     /// Function to fetch employees.
     /// Completion handler to closure.
-    func fetchEmployees(completion: @escaping (Result<[Employee], DataResponseError>) -> Void) {
-        let request = ApiRestClient<EmployeeResponse<[Employee]>>(urlServer: baseURL)
+    func fetchEmployees(completion: @escaping (Result<[User], DataResponseError>) -> Void) {
+        let request = ApiRestClient<[User]>(urlServer: baseURL)
         request.request(method: .get, parameters: nil) { (response) in
-            switch response {
-                case .failure(let error):
-                    completion(Result.failure(error))
-                
-                case .success(let response):
-                    if response.status == "success" {
-                        completion(Result.success(response.data))
-                    } else {
-                        completion(Result.failure(DataResponseError.custom(message: "Response status is: \(response.status)")))
-                }
-            }
+            completion(response)
         }
     }
     
