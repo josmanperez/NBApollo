@@ -9,3 +9,10 @@ target 'NBApollo' do
   pod 'Alamofire', '~> 4.9.1'
 
 end
+
+target 'Example' do
+	use_frameworks!
+
+	pod 'NBApollo', :path => '.'
+
+end

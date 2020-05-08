@@ -1,0 +1,30 @@
+{
+  "name": "NBApollo",
+  "version": "0.1.6",
+  "summary": "HTTP Request made simple",
+  "description": "Librería para gestionar las llamadas al API. Devuelve un objeto que conforme con el protocolo codeable",
+  "homepage": "https://github.com/josmanperez/NBApollo",
+  "license": "MIT",
+  "authors": {
+    "Josman Pérez Expósito": "jppe86@gmail.com"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source": {
+    "git": "https://github.com/josmanperez/NBApollo.git",
+    "tag": "0.1.6"
+  },
+  "source_files": [
+    "NBApollo",
+    "NBApollo/**/*.{h,m}"
+  ],
+  "exclude_files": "NBApollo/Exclude",
+  "dependencies": {
+    "Alamofire": [
+      "~> 4.9.1"
+    ]
+  },
+  "swift_versions": "4.2",
+  "swift_version": "4.2"
+}

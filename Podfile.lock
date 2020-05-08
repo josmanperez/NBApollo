@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
+  - NBApollo (0.1.6):
+    - Alamofire (~> 4.9.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
+  - NBApollo (from `.`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
 
+EXTERNAL SOURCES:
+  NBApollo:
+    :path: "."
+
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  NBApollo: 699817ed9e4dcf08711075e1c092edbbb1ee500a
 
-PODFILE CHECKSUM: 86c3d646228858e1d270db21b2460e8844e1d035
+PODFILE CHECKSUM: a0eef42d8ff5d13689a471732787dcbc2eecdf30
 
 COCOAPODS: 1.9.1
