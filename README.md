@@ -35,7 +35,7 @@ NBApollo use ```Alamofire``` to make request.
 NBApollo is not on cocoapods yet, but you could install using Pod.
 
 ```ruby
-  pod 'NBApollo', :git => 'https://github.com/josmanperez/NBApollo.git', :tag => '0.1.1'
+  pod 'NBApollo', :git => 'https://github.com/josmanperez/NBApollo.git', :tag => '0.1.7'
 ```
 
 ## Usage
