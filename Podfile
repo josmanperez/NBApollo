@@ -6,6 +6,6 @@ target 'NBApollo' do
   use_frameworks!
 
   # Pods for NBApollo
-  pod 'Alamofire', '~> 4.9.1'
+  pod 'Alamofire', '~> 5.2'
 
 end

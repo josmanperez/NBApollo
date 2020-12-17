@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "NBApollo"
-  spec.version      = "0.1.6"
+  spec.version      = "2.0.0"
   spec.summary      = "HTTP Request made simple"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "10.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -133,7 +133,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  spec.dependency 'Alamofire', '~> 4.9.1'
+  spec.dependency 'Alamofire', '~> 5.2'
 
-  spec.swift_versions = "4.2"
+  spec.swift_versions = "5"
 end
