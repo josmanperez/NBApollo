@@ -5,6 +5,8 @@
 
 NBApollo: A wrapper library around Alamofire HTTP Network with codable objects.
 
+If you want to use it with Swift 4 then move to tag 0.1.7
+
 - [Features](#features)
 - [Component Libraries](#component-libraries)
 - [Requirements](#requirements)
@@ -26,7 +28,7 @@ NBApollo use ```Alamofire``` to make request.
 
 - iOS 10.0+
 - Xcode 11+
-- Swift 4.2+
+- Swift 5+
 
 ## Installation
 
@@ -35,7 +37,7 @@ NBApollo use ```Alamofire``` to make request.
 NBApollo is not on cocoapods yet, but you could install using Pod.
 
 ```ruby
-  pod 'NBApollo', :git => 'https://github.com/josmanperez/NBApollo.git', :tag => '0.1.7'
+  pod 'NBApollo', :git => 'https://github.com/josmanperez/NBApollo.git', :tag => '0.2.0'
 ```
 
 ## Usage
