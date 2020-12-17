@@ -29,7 +29,7 @@ public class ApiRestClient<T:Decodable>: ApiRest {
     }
 
     fileprivate func dorequest(url: String, headers: HTTPHeaders? = nil, method: HTTPMethod, parameters: [String: String]? = nil, completionHandler: @escaping (Result<T,DataResponseError>) -> Void) {
-        Alamofire.request(url, method: method, parameters: parameters, headers: headers).responseJSON {
+        AF.request(url, method: method, parameters: parameters, headers: headers).responseJSON {
             response in
             switch response.result {
                 case .success( _):
